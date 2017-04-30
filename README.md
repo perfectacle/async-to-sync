@@ -215,6 +215,6 @@ ats(arrAsync, fallback);
 ```
 
 #### Support Browser
-![Chrome](imgs/chrome.png) | ![Firefox](imgs/firefox.jpg) | ![IE](imgs/IE.png)| | ![Node.js](imgs/node.png)|
+![Chrome](imgs/chrome.png) | ![Firefox](imgs/firefox.jpg) | ![IE](imgs/IE.png)| ![Node.js](imgs/node.png)|
 --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | 9+ ✔ |  6+ ✔ |
