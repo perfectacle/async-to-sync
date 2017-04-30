@@ -90,7 +90,7 @@ you can use third-party like bluebird, axios, jQuery slim.
 If you used XHR(XMLHttpRequest) or fetch, you should use Promise.  
 then method is success callback function.  
 catch method is fail callback function.  
-`Attention!`
+`Attention!`  
 Some AJAX request becomes a problem in IE 9, but it isn't async-to-sync's problem.  
 Please read below link.  
 * [Can I Use Cross-Origin Resource Sharing?](http://caniuse.com/#feat=cors)  
@@ -214,7 +214,7 @@ var arrAsync = [
 ats(arrAsync, fallback);
 ```
 
-#### Support Browser
+#### Support Platform
 ![Chrome](imgs/chrome.png) | ![Firefox](imgs/firefox.jpg) | ![IE](imgs/IE.png)| ![Node.js](imgs/node.png)|
 --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | 9+ ✔ |  6+ ✔ |
