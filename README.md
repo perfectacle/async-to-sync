@@ -23,7 +23,7 @@ yarn add async-to-sync
 If you didn't know browser or node of supported status, you would visit below link.  
 [ECMAScript 6 compatibility table | Promise](https://kangax.github.io/compat-table/es6/#test-Promise)  
 [Node.js ES2015/ES6 | Promise](http://node.green/#ES2015-built-ins-Promise)  
-[ECMAScript 2016+ compatibility table | async](http://kangax.github.io/compat-table/es2016plus/#test-async_functions)
+[ECMAScript 2016+ compatibility table | async](http://kangax.github.io/compat-table/es2016plus/#test-async_functions)  
 [Node.js ES2017 support | async](hhttp://node.green/#ES2017-features-async-functions)  
 
 #### How to import async-to-sync
@@ -93,8 +93,8 @@ catch method is fail callback function.
 `Attention!`  
 Some AJAX request becomes a problem in IE 9, but it isn't async-to-sync's problem.  
 Please read below link.  
-* [Can I Use Cross-Origin Resource Sharing?](http://caniuse.com/#feat=cors)  
-* [IE9 jQuery AJAX with CORS returns “Access is denied”](http://stackoverflow.com/questions/10232017/ie9-jquery-ajax-with-cors-returns-access-is-denied)  
+  * [Can I Use Cross-Origin Resource Sharing?](http://caniuse.com/#feat=cors)  
+  * [IE9 jQuery AJAX with CORS returns “Access is denied”](http://stackoverflow.com/questions/10232017/ie9-jquery-ajax-with-cors-returns-access-is-denied)  
 ```javascript
 var fallback = function(e) {
   alert('Error: ' + e);
