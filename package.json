@@ -1,5 +1,5 @@
 {
-  "name": "async-to-sync-test",
+  "name": "async-to-sync",
   "version": "1.0.0",
   "description": "async-to-sync is help you for Javascript asynchronous function to synchronous function.",
   "main": "./module/es2017/index.js",
