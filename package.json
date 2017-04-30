@@ -1,0 +1,27 @@
+{
+  "name": "async-to-sync-test",
+  "version": "1.0.0",
+  "description": "async-to-sync is help you for Javascript asynchronous function to synchronous function.",
+  "main": "./module/es2017/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" npm&& exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfectacle/async-to-sync.git"
+  },
+  "keywords": ["Async", "Await", "Javascript", "Callback", "Promise", "AJAX", "Fetch", "XHR", "SetTimout", "SetInterval"],
+  "author": {
+    "name": "perfectacle",
+    "email": "perfectacle@naver.com",
+    "url": "https://perfectacle.github.io/"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  }],
+  "bugs": {
+    "url": "https://github.com/perfectacle/async-to-sync/issues"
+  },
+  "homepage": "https://github.com/perfectacle/async-to-sync#readme"
+}
