@@ -1,11 +1,11 @@
-const ats = (cbs, fb) => {
+const ats = (arrCallback, fallback) => {
   const promise = cb => new Promise(res => cb(res));
   (async() => {
     try {
-      for(const cb of cbs) await promise(cb)
+      for(const cb of arrCallback) await promise(cb)
     } catch(e) {
-      if(typeof fb !== 'function') return console.error('Error:', e);
-      fb();
+      if(typeof fallback !== 'function') return console.error('Error:', e);
+      fallback();
     }
   })();
 };

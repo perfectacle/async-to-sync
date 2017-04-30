@@ -11,7 +11,7 @@ var promise = function promise(cb) {
     return cb(res);
   });
 };
-var ats = function ats(arrCallback, fb) {
+var ats = function ats(arrCallback, fallback) {
   _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
     var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, cb;
 
@@ -83,7 +83,7 @@ var ats = function ats(arrCallback, fb) {
             _context.prev = 29;
             _context.t1 = _context['catch'](0);
 
-            if (!(typeof fb !== 'function')) {
+            if (!(typeof fallback !== 'function')) {
               _context.next = 33;
               break;
             }
@@ -91,7 +91,7 @@ var ats = function ats(arrCallback, fb) {
             return _context.abrupt('return', console.error('Error:', _context.t1));
 
           case 33:
-            fb();
+            fallback();
 
           case 34:
           case 'end':
