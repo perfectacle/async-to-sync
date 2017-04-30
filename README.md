@@ -35,6 +35,7 @@ import ats from 'async-to-sync';
 ###### In async/await & Promise or ES2015 not support browser
 You must use [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).  
 You must import babel-polyfill before async-to-sync.  
+And you don't like to transpile ES2015+ to ES5 using babel, dont't use ES2015 Syntax. (for IE)
 ```javascript
 import 'babel-polyfill';
 import ats from 'async-to-sync/module/no-es2017';
@@ -48,7 +49,8 @@ import ats from 'async-to-sync/module/no-es2017';
 
 ###### In async/await & Promise or ES2015 not support browser
 You must use babel-polyfill.  
-You must import babel-polyfill before async-to-sync.
+You must import babel-polyfill before async-to-sync.  
+And you don't like to transpile ES2015+ to ES5 using babel, dont't use ES2015 Syntax. (for IE)
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
 <script src="node_modules/async-to-sync-test/browser/no-es2017/index.min.js"></script>
@@ -62,7 +64,6 @@ const ats = require('async-to-sync');
 ###### In async/await & Promise or ES2015 not support Node
 You must use [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).  
 You must import babel-polyfill before async-to-sync.  
-And you must transpile ES2017 to ES5 using babel.
 ```javascript
 require('babel-polyfill');
 const ats = require('async-to-sync/module/no-es2017');
@@ -88,7 +89,12 @@ var b = function(b) {
 you can use third-party like bluebird, axios, jQuery slim.  
 If you used XHR(XMLHttpRequest) or fetch, you should use Promise.  
 then method is success callback function.  
-catch method is fail callback function.
+catch method is fail callback function.  
+`Attention!`
+Some AJAX request becomes a problem in IE 9, but it isn't async-to-sync's problem.  
+Please read below link.  
+* [Can I Use Cross-Origin Resource Sharing?](http://caniuse.com/#feat=cors)  
+* [IE9 jQuery AJAX with CORS returns “Access is denied”](http://stackoverflow.com/questions/10232017/ie9-jquery-ajax-with-cors-returns-access-is-denied)  
 ```javascript
 var fallback = function(e) {
   alert('Error: ' + e);
@@ -209,6 +215,6 @@ ats(arrAsync, fallback);
 ```
 
 #### Support Browser
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png)|
---- | --- | --- |
-Latest ✔ | Latest ✔ | 9+ ✔ |
+![Chrome](imgs/chrome.png) | ![Firefox](imgs/firefox.jpg) | ![IE](imgs/IE.png)| | ![Node.js](imgs/node.png)|
+--- | --- | --- | --- |
+Latest ✔ | Latest ✔ | 9+ ✔ |  6+ ✔ |
