@@ -2,7 +2,7 @@
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var ats = function ats(cbs, fb) {
+var ats = function ats(arrCallback, fallback) {
   var promise = function promise(cb) {
     return new Promise(function (res) {
       return cb(res);
@@ -20,7 +20,7 @@ var ats = function ats(cbs, fb) {
             _didIteratorError = false;
             _iteratorError = undefined;
             _context.prev = 4;
-            _iterator = cbs[Symbol.iterator]();
+            _iterator = arrCallback[Symbol.iterator]();
 
           case 6:
             if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
@@ -79,7 +79,7 @@ var ats = function ats(cbs, fb) {
             _context.prev = 29;
             _context.t1 = _context['catch'](0);
 
-            if (!(typeof fb !== 'function')) {
+            if (!(typeof fallback !== 'function')) {
               _context.next = 33;
               break;
             }
@@ -87,7 +87,7 @@ var ats = function ats(cbs, fb) {
             return _context.abrupt('return', console.error('Error:', _context.t1));
 
           case 33:
-            fb();
+            fallback();
 
           case 34:
           case 'end':

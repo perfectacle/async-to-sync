@@ -1,5 +1,8 @@
 # async-to-sync
-It is help you for Javascript asynchronous function to synchronous function.  
+[![NPM](https://nodei.co/npm/async-to-sync.png)](https://www.npmjs.com/package/async-to-sync)
+![npm](https://img.shields.io/npm/dt/async-to-sync.svg?style=plastic)
+![npm](https://img.shields.io/npm/v/async-to-sync.svg?style=plastic)  
+async-to-sync is help you for Javascript asynchronous function to synchronous function.  
 You don't should know async/await, also Promise!!
 
 ## Why did you make async-to-sync
@@ -25,6 +28,19 @@ If you didn't know browser or node of supported status, you would visit below li
 [Node.js ES2015/ES6 | Promise](http://node.green/#ES2015-built-ins-Promise)  
 [ECMAScript 2016+ compatibility table | async](http://kangax.github.io/compat-table/es2016plus/#test-async_functions)  
 [Node.js ES2017 support | async](hhttp://node.green/#ES2017-features-async-functions)  
+`Attention!`  
+async-to-sync doesn't contains babel-polyfill,  
+So if you want to it, you should install it.  
+npm
+```bash
+npm i -S babel-polyfill
+```
+yarn
+```bash
+yarn add babel-polyfill
+```
+or use cdn.  
+If you want to learn quickly how to use, you should read [examples](https://github.com/perfectacle/async-to-sync/examples).
 
 #### How to import async-to-sync
 ##### In webpack
@@ -58,12 +74,14 @@ And you don't like to transpile ES2015+ to ES5 using babel, dont't use ES2015 Sy
 
 ##### In Node.js
 ###### In async/await & Promise support Node
+If you want to use import syntax, please use transpiler like babel.
 ```javascript
 const ats = require('async-to-sync');
 ```
 ###### In async/await & Promise or ES2015 not support Node
 You must use [babel-polyfill](https://babeljs.io/docs/usage/polyfill/).  
 You must import babel-polyfill before async-to-sync.  
+And if you want to use import syntax, please use transpiler like babel.
 ```javascript
 require('babel-polyfill');
 const ats = require('async-to-sync/module/no-es2017');
@@ -98,12 +116,12 @@ Please read below link.
 ```javascript
 var fallback = function(e) {
   alert('Error: ' + e);
-}
+};
 
 var xhr = function(url, method) {
   method = method || 'get';
   return new Promise(function(res, rej) {
-    const xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
     xhr.responseType = "json";
     xhr.onreadystatechange = function() {
@@ -125,7 +143,9 @@ var _fetch = function(url, method, headers, body) {
   body = body || null;
   return fetch(url, {
     method, headers, body
-  }).then(res => res.json({}));
+  }).then(function(res) {
+    return res.json({});
+  });
 };
 
 var c = function(url) {
