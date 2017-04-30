@@ -31,16 +31,16 @@ If you didn't know browser or node of supported status, you would visit below li
 `Attention!`  
 async-to-sync doesn't contains babel-polyfill,  
 So if you want to it, you should install it.  
-npm
+`npm`
 ```bash
 npm i -S babel-polyfill
 ```
-yarn
+`yarn`
 ```bash
 yarn add babel-polyfill
 ```
 or use cdn.  
-If you want to learn quickly how to use, you should read [examples](https://github.com/perfectacle/async-to-sync/examples).
+If you want to learn quickly how to use, you should read [examples](https://github.com/perfectacle/async-to-sync/tree/master/examples).
 
 #### How to import async-to-sync
 ##### In webpack
