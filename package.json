@@ -1,6 +1,6 @@
 {
   "name": "async-to-sync",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "async-to-sync is help you for Javascript asynchronous function to synchronous function.",
   "main": "./module/es2017/index.js",
   "scripts": {
