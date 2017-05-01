@@ -60,7 +60,7 @@ import ats from 'async-to-sync/module/no-es2017';
 ##### In browser (CDN isn't support yet, just wait a minute!)
 ###### In async/await & Promise support browser
 ```html
-<script src="node_modules/async-to-sync-test/browser/es2017/index.min.js"></script>
+<script src="node_modules/async-to-sync/browser/es2017/index.min.js"></script>
 ```
 
 ###### In async/await & Promise or ES2015 not support browser
@@ -69,7 +69,7 @@ You must import babel-polyfill before async-to-sync.
 And you don't like to transpile ES2015+ to ES5 using babel, dont't use ES2015 Syntax. (for IE)
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
-<script src="node_modules/async-to-sync-test/browser/no-es2017/index.min.js"></script>
+<script src="node_modules/async-to-sync/browser/no-es2017/index.min.js"></script>
 ```
 
 ##### In Node.js
